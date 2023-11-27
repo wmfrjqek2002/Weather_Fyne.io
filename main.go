@@ -18,7 +18,7 @@ import (
 	"time"
 )
 
-var ApiKey string = "AIzaSyBorAKwVMjlczlsw5HG_GXPAnvv07cJoFc"
+var ApiKey string = "Your api key" //use your api key
 
 type Response struct {
 	Location struct {
@@ -99,7 +99,7 @@ func main() {
 	lat := response.Location.Lat
 	lng := response.Location.Lng
 
-	res, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=39a8207fa260e1c283aa32e49aae2177", lat, lng))
+	res, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=Your_api_key", lat, lng)) //use your api_key
 	if err != nil {
 		fmt.Println("Error is ", err)
 	}
